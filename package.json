@@ -12,16 +12,11 @@
   "keywords": [
     "react",
     "reactjs",
-    "boilerplate",
-    "mobx",
-    "starter-kit"
+    "mobx"
   ],
-  "author": "Michel Weststrate <mweststrate@gmail.com> (http://github.com/mweststrate)",
+  "author": "<syszhpe@gmail.com> (https://foio.github.io)",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mobxjs/mobx/issues"
-  },
-  "homepage": "http://mobxjs.github.com/mobx",
+  "homepage": "https://foio.github.io",
   "devDependencies": {
     "babel-core": "^6.9.1",
     "babel-eslint": "^6.1.0",
