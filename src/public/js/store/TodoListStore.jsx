@@ -1,4 +1,4 @@
-import {observable, computed, reaction} from 'mobx';
+import {observable, computed, action} from 'mobx';
 import TodoItemModel from '../model/TodoItemModel';
 import autobind  from 'autobind-decorator'
 import {FilterType} from '../util/Enum.jsx'
@@ -11,16 +11,19 @@ class TotoListStore {
     @observable marked = false;
 
 
+    @action
     toggleCompleted(completed) {
         this.todolist.forEach(todoItem => {
             todoItem.setCompleted(completed)
         });
     }
 
+    @action
     changeFilter(filter) {
         this.filter = filter;
     }
 
+    @action
     addTodo(title) {
         var self = this;
         var todoItem = new TodoItemModel(uuid(), title, false);
@@ -39,7 +42,7 @@ class TotoListStore {
         });
     }
 
-
+    @action
     deleteTodo(id) {
         var self = this;
         fetch('/todos/' + id, {

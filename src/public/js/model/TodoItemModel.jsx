@@ -1,4 +1,4 @@
-import {observable, reaction} from 'mobx';
+import {observable, reaction, action} from 'mobx';
 import autobind from 'autobind-decorator'
 
 @autobind
@@ -21,14 +21,17 @@ class TodoItemModel {
         )
     }
 
+    @action
     toggle() {
         this.completed = !this.completed;
     }
 
+    @action
     setCompleted(completed) {
         this.completed = completed;
     }
 
+    @action
     setTitle(title) {
         this.title = title;
     }
